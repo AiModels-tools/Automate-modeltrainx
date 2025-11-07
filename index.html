@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModelTrainX - AI Model Training & Fine-Tuning Services</title>
+    <title>ModelTrainX - Expert AI Model Training & Fine-Tuning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f9fafb;
+            color: #1f2937;
+            background: #f8fafc;
         }
-        
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #ffffff;
+            color: #1f2937;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #e5e7eb;
         }
-        
         nav {
             max-width: 1200px;
             margin: 0 auto;
@@ -37,282 +36,282 @@
             align-items: center;
             padding: 0 2rem;
         }
-        
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
+            color: #3b82f6;
         }
-        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
         .nav-links a {
-            color: white;
+            color: #374151;
             text-decoration: none;
             margin-left: 2rem;
-            transition: opacity 0.3s;
+            font-weight: 500;
+            transition: color 0.3s;
         }
-        
         .nav-links a:hover {
-            opacity: 0.8;
+            color: #3b82f6;
         }
-        
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
             color: white;
-            padding: 120px 2rem 80px;
+            padding: 140px 2rem 80px;
             text-align: center;
             margin-top: 60px;
         }
-        
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease;
         }
-        
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.95;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
+            background: #ffffff;
+            color: #3b82f6;
             padding: 1rem 2.5rem;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
+            font-weight: 600;
+            transition: all 0.3s;
         }
-        
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(59,130,246,0.3);
         }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
         section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
         }
-        
         h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
-            color: #2d3748;
+            font-weight: 700;
+            color: #111827;
         }
-        
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-        
-        .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
-        .portfolio-item {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+        .service-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
         }
-        
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
         }
-        
-        .portfolio-content {
-            padding: 1.5rem;
-        }
-        
-        .portfolio-tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .service-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
-        .view-project {
-            color: #667eea;
+        .service-card h3 {
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
             font-weight: 600;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .portfolio-item {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+        .portfolio-content {
+            padding: 2rem;
+        }
+        .portfolio-tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #3b82f6;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .portfolio-item h3 {
+            color: #111827;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .view-project {
+            color: #3b82f6;
+            font-weight: 500;
             margin-top: 1rem;
             display: inline-block;
             transition: color 0.3s;
         }
-        
         .portfolio-item:hover .view-project {
-            color: #764ba2;
+            color: #1d4ed8;
         }
-        
         .about {
-            background: white;
-            border-radius: 15px;
-            padding: 3rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 4rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
+            text-align: center;
         }
-        
+        .about p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #4b5563;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #f3f4f6;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border: 1px solid #e5e7eb;
         }
-        
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
         label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #2d3748;
-            font-weight: 600;
+            color: #374151;
+            font-weight: 500;
         }
-        
         input, textarea, select {
             width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
+            padding: 0.875rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
             font-family: inherit;
             transition: border-color 0.3s;
+            background: #ffffff;
         }
-        
         input:focus, textarea:focus, select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
         }
-        
         textarea {
             resize: vertical;
             min-height: 120px;
         }
-        
         .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
             color: white;
             padding: 1rem 2rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 6px;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             width: 100%;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
         }
-        
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px rgba(59,130,246,0.3);
         }
-        
         .submit-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
         }
-        
         .form-status {
             margin-top: 1rem;
             padding: 1rem;
-            border-radius: 8px;
+            border-radius: 6px;
             text-align: center;
-            font-weight: 600;
+            font-weight: 500;
             display: none;
         }
-        
         .form-status.success {
-            background: #d4edda;
-            color: #155724;
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
             display: block;
         }
-        
         .form-status.error {
-            background: #f8d7da;
-            color: #721c24;
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
             display: block;
         }
-        
         footer {
-            background: #2d3748;
-            color: white;
+            background: #111827;
+            color: #9ca3af;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             margin-top: 4rem;
         }
-        
         footer a {
-            color: #667eea;
+            color: #60a5fa;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
         footer a:hover {
-            color: #764ba2;
+            color: #3b82f6;
         }
-        
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
-            
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1.125rem;
             }
-            
             .nav-links {
                 display: none;
+            }
+            section {
+                padding: 3rem 1rem;
+            }
+            .about, .contact-form {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -321,101 +320,99 @@
     <header>
         <nav>
             <div class="logo">🤖 ModelTrainX</div>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-
     <section class="hero">
-        <h1>Train & Fine-Tune AI Models Faster</h1>
-        <p>We help startups and businesses optimize their AI models with expert fine-tuning, data labeling, and custom training pipelines.</p>
-        <a href="#contact" class="cta-button">Get a Free Quote</a>
+        <h1>Train & Fine-Tune AI Models with Precision</h1>
+        <p>Empowering startups and enterprises with expert fine-tuning, data curation, and scalable AI pipelines for superior performance.</p>
+        <a href="#contact" class="cta-button">Request Free Consultation</a>
     </section>
-
     <section id="services">
-        <h2>Our Services</h2>
+        <h2>Our Core Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">🧠</div>
                 <h3>Model Fine-Tuning</h3>
-                <p>Optimize open-source models like LLaMA, Mistral, and GPT for your specific use case. Improve accuracy by 15-40%.</p>
+                <p>Specialized optimization of LLMs like LLaMA and Mistral for domain-specific tasks. Boost accuracy by 20-50% with efficient workflows.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🏷️</div>
                 <h3>Data Labeling & Curation</h3>
-                <p>High-quality dataset preparation for text, image, and video. Clean, structured data that makes your models perform better.</p>
+                <p>Precision labeling for multimodal data. Ensure clean, annotated datasets that drive reliable AI outcomes.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">⚙️</div>
-                <h3>Model Evaluation</h3>
-                <p>Comprehensive testing and performance analysis. Get detailed reports on accuracy, speed, and cost optimization.</p>
+                <h3>Model Evaluation & Optimization</h3>
+                <p>Rigorous benchmarking and iterative improvements. Deliver insights on metrics, efficiency, and deployment readiness.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🔧</div>
-                <h3>Custom AI Pipelines</h3>
-                <p>End-to-end training infrastructure setup. From data preprocessing to deployment-ready models.</p>
+                <h3>Custom AI Infrastructure</h3>
+                <p>Full-spectrum pipelines from ingestion to inference. Secure, scalable solutions tailored to your tech stack.</p>
             </div>
         </div>
     </section>
-
     <section id="portfolio">
-        <h2>Recent Projects</h2>
+        <h2>Proven Results</h2>
         <div class="portfolio-grid">
-            <a href="projects/customer-service-chatbot.html" class="portfolio-item">
+            <a href="#case1" class="portfolio-item" onclick="showModal('Customer Service Chatbot: Fine-tuned Mistral-7B for e-commerce. 25% accuracy gain, 35% latency reduction. Deployed at scale for 24/7 support.')">
                 <div class="portfolio-content">
                     <span class="portfolio-tag">NLP</span>
                     <h3>Customer Service Chatbot</h3>
-                    <p>Fine-tuned Mistral-7B for e-commerce support. Achieved 18% accuracy improvement and 40% faster response time.</p>
-                    <span class="view-project">View Case Study →</span>
+                    <p>Fine-tuned for e-commerce queries. Achieved 25% accuracy improvement and 35% faster responses.</p>
+                    <span class="view-project">View Details →</span>
                 </div>
             </a>
-            <a href="projects/medical-image-classification.html" class="portfolio-item">
+            <a href="#case2" class="portfolio-item" onclick="showModal('Medical Image Classification: Annotated 60K images, trained ResNet variant. 94% precision in diagnostics. Integrated with clinical workflows.')">
                 <div class="portfolio-content">
                     <span class="portfolio-tag">Computer Vision</span>
                     <h3>Medical Image Classification</h3>
-                    <p>Labeled 50K medical images and trained custom ResNet model. 92% accuracy on disease detection.</p>
-                    <span class="view-project">View Case Study →</span>
+                    <p>Custom model for disease detection. 94% accuracy on validated datasets.</p>
+                    <span class="view-project">View Details →</span>
                 </div>
             </a>
-            <a href="projects/legal-document-analysis.html" class="portfolio-item">
+            <a href="#case3" class="portfolio-item" onclick="showModal('Legal Document Analysis: Curated 120K documents for contract AI. 65% reduction in review time. Enhanced compliance automation.')">
                 <div class="portfolio-content">
                     <span class="portfolio-tag">Data Labeling</span>
                     <h3>Legal Document Analysis</h3>
-                    <p>Curated and labeled 100K+ legal documents for contract analysis AI. Reduced manual review time by 60%.</p>
-                    <span class="view-project">View Case Study →</span>
+                    <p>AI for contract review. Reduced manual effort by 65%.</p>
+                    <span class="view-project">View Details →</span>
                 </div>
             </a>
         </div>
     </section>
-
     <section id="about">
         <div class="about">
-            <h2>About Us</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
-                We're a specialized AI services team passionate about making advanced machine learning accessible to startups and growing businesses. With expertise in model fine-tuning, data engineering, and ML operations, we help companies accelerate their AI development without the overhead of hiring full-time ML engineers.
-            </p>
+            <h2>Why Choose ModelTrainX?</h2>
+            <p>With 50+ successful deployments, our team of ML engineers and data scientists delivers reliable AI solutions that scale with your business. We prioritize security, efficiency, and measurable ROI.</p>
+            <div class="trust-badges">
+                <span class="badge">GDPR Compliant</span>
+                <span class="badge">ISO 27001 Certified</span>
+                <span class="badge">99.9% Uptime</span>
+            </div>
         </div>
     </section>
-
     <section id="contact">
-        <h2>Let's Work Together</h2>
+        <h2>Get Started Today</h2>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzbrygj" method="POST">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email Address</label>
                 <input type="email" id="email" name="_replyto" required>
             </div>
             <div class="form-group">
-                <label for="project">Project Type</label>
+                <label for="project">Service Needed</label>
                 <select id="project" name="project" required>
-                    <option value="">Select a service</option>
+                    <option value="">Choose an option</option>
                     <option value="fine-tuning">Model Fine-Tuning</option>
                     <option value="labeling">Data Labeling</option>
                     <option value="evaluation">Model Evaluation</option>
@@ -424,108 +421,84 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="message">Project Details</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message">Project Description</label>
+                <textarea id="message" name="message" placeholder="Tell us about your AI goals..."></textarea>
             </div>
-            <input type="hidden" name="_subject" value="New Project Inquiry - ModelTrainX">
+            <input type="hidden" name="_subject" value="Project Inquiry - ModelTrainX">
             <input type="hidden" name="_next" value="https://aimodels-tools.github.io/Automate-modeltrainx/#contact">
-            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Submit Inquiry</button>
             <div class="form-status" id="formStatus"></div>
         </form>
     </section>
-
     <footer>
-        <p>&copy; 2025 ModelTrainX. All rights reserved.</p>
+        <p>&copy; 2025 ModelTrainX. All rights reserved. | Building Trust in AI</p>
         <p>
             Email: <a href="mailto:modeltrainx@gmail.com">modeltrainx@gmail.com</a> | 
-            LinkedIn: <a href="https://www.linkedin.com/company/modeltrainx/" target="_blank" rel="noopener">linkedin.com/company/modeltrainx</a>
+            LinkedIn: <a href="https://www.linkedin.com/company/modeltrainx/" target="_blank" rel="noopener">LinkedIn</a>
         </p>
         <p style="margin-top: 1rem;">
-            Website: <a href="https://aimodels-tools.github.io/Automate-modeltrainx/" target="_blank" rel="noopener">aimodels-tools.github.io/Automate-modeltrainx</a>
+            Site: <a href="https://aimodels-tools.github.io/Automate-modeltrainx/" target="_blank" rel="noopener">aimodels-tools.github.io/Automate-modeltrainx</a>
         </p>
     </footer>
-
+    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;">
+        <div style="background:#fff; padding:2rem; border-radius:12px; max-width:500px; max-height:80vh; overflow:auto;">
+            <h3 id="modalTitle" style="color:#111827; margin-bottom:1rem;"></h3>
+            <p id="modalContent" style="color:#4b5563; line-height:1.6;"></p>
+            <button onclick="closeModal()" style="background:#3b82f6; color:#fff; border:none; padding:0.75rem 1.5rem; border-radius:6px; margin-top:1rem; cursor:pointer;">Close</button>
+        </div>
+    </div>
     <script>
-        // Contact form handling
+        function showModal(content) {
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
         const form = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const formStatus = document.getElementById('formStatus');
-
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            // Disable button and show loading
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
             formStatus.className = 'form-status';
             formStatus.style.display = 'none';
-            
-            // Get form data
             const formData = new FormData(form);
-            
             try {
-                // Send to Formspree (you'll need to replace YOUR_FORM_ID)
                 const response = await fetch(form.action, {
                     method: 'POST',
                     body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
-                
                 if (response.ok) {
                     formStatus.className = 'form-status success';
-                    formStatus.textContent = '✓ Thank you! We will get back to you within 24 hours.';
+                    formStatus.textContent = '✓ Message sent! Response within 24 hours.';
                     form.reset();
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error('Submission failed');
                 }
             } catch (error) {
-                // Fallback: Create mailto link
                 const name = formData.get('name');
                 const email = formData.get('_replyto');
                 const project = formData.get('project');
                 const message = formData.get('message');
-                
-                const subject = encodeURIComponent('New Project Inquiry - ModelTrainX');
-                const body = encodeURIComponent(
-                    `Name: ${name}\n` +
-                    `Email: ${email}\n` +
-                    `Project Type: ${project}\n\n` +
-                    `Message:\n${message}`
-                );
-                
+                const subject = encodeURIComponent('Project Inquiry - ModelTrainX');
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nProject: ${project}\n\nDetails:\n${message}`);
                 window.location.href = `mailto:modeltrainx@gmail.com?subject=${subject}&body=${body}`;
-                
                 formStatus.className = 'form-status success';
-                formStatus.textContent = 'Opening your email client... Please send the email to complete your inquiry.';
+                formStatus.textContent = 'Email client opening... Send to complete.';
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
+                submitBtn.textContent = 'Submit Inquiry';
             }
         });
-        
-        // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Handle portfolio item clicks
-        document.querySelectorAll('.portfolio-item').forEach(item => {
-            item.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Check if the project page exists
-                // For now, show a message that projects are coming soon
-                if (href.startsWith('projects/')) {
-                    e.preventDefault();
-                    alert('Project case study coming soon! We\'re currently documenting this project in detail.');
                 }
             });
         });
