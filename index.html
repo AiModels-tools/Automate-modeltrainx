@@ -337,7 +337,7 @@
         /* Portfolio */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
@@ -469,6 +469,7 @@
             justify-content: center;
             color: white;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
         .contact-form {
@@ -603,11 +604,58 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 3rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .contact-wrapper {
+                padding: 3rem;
+                gap: 3rem;
+            }
         }
         
         @media (max-width: 968px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 120px 1.5rem 80px;
+            }
+            
             .hero-content {
                 grid-template-columns: 1fr;
+                gap: 2.5rem;
                 text-align: center;
             }
             
@@ -615,24 +663,221 @@
                 font-size: 2.5rem;
             }
             
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+            
             .hero-buttons {
                 justify-content: center;
             }
             
             .trust-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
             
             .contact-wrapper {
                 grid-template-columns: 1fr;
+                padding: 2.5rem;
+                gap: 2.5rem;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.75rem;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            nav {
+                padding: 0 1rem;
             }
             
-            .nav-links {
-                display: none;
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            
+            .hero {
+                padding: 100px 1rem 60px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-text p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 0.9rem 1.5rem;
+            }
+            
+            .trust-bar {
+                padding: 1.5rem;
+            }
+            
+            .trust-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+            
+            .section-header {
+                margin-bottom: 3rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .section-description {
+                font-size: 0.95rem;
+            }
+            
+            .service-card {
+                padding: 2rem;
+            }
+            
+            .service-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.25rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .portfolio-content {
+                padding: 1.5rem;
+            }
+            
+            .portfolio-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .portfolio-metrics {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-wrapper {
+                padding: 2rem 1.5rem;
+                gap: 2rem;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-details li {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+            
+            footer {
+                padding: 3rem 1rem 2rem;
+            }
+            
+            .footer-brand h4 {
+                font-size: 1.25rem;
+            }
+            
+            .footer-bottom {
+                font-size: 0.85rem;
+                padding-top: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero-text h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 1.75rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .portfolio-image {
+                height: 150px;
+                font-size: 3rem;
+            }
+            
+            .contact-wrapper {
+                padding: 1.5rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -811,14 +1056,14 @@
                         <div class="contact-icon">📧</div>
                         <div>
                             <strong>Email</strong><br>
-                            <a href="mailto:modeltrainx@gmail.com" style="color: var(--primary);">modeltrainx@gmail.com</a>
+                            <a href="mailto:modeltrainx@gmail.com" style="color: var(--primary); text-decoration: none;">modeltrainx@gmail.com</a>
                         </div>
                     </li>
                     <li>
                         <div class="contact-icon">💼</div>
                         <div>
                             <strong>LinkedIn</strong><br>
-                            <a href="https://www.linkedin.com/company/modeltrainx/" target="_blank" style="color: var(--primary);">@modeltrainx</a>
+                            <a href="https://www.linkedin.com/company/modeltrainx/" target="_blank" style="color: var(--primary); text-decoration: none;">@modeltrainx</a>
                         </div>
                     </li>
                     <li>
